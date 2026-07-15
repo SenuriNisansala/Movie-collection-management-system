@@ -1,0 +1,17 @@
+{
+  "name": "movie_management_system",
+  "version": "1.0.0",
+  "description": "Simple movie management system built with Node.js and Express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": ["movie", "management", "express"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

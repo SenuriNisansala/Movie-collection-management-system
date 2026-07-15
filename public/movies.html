@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Movie Management</p>
+          <h1>Manage Your Film Collection</h1>
+          <p class="subtitle">Save, update, and organize movie records from one dashboard.</p>
+        </div>
+        <a class="nav-link" href="index.html">Back to Home</a>
+      </header>
+
+      <main class="layout">
+        <section class="panel form-panel">
+          <h2 id="formTitle">Add Movie</h2>
+          <form id="movieForm">
+            <input type="hidden" id="movieId" />
+
+            <label>
+              Title
+              <input type="text" id="title" placeholder="The Matrix" required />
+            </label>
+
+            <label>
+              Genre
+              <input type="text" id="genre" placeholder="Sci-Fi" required />
+            </label>
+
+            <label>
+              Year
+              <input type="number" id="year" placeholder="1999" min="1900" max="2100" required />
+            </label>
+
+            <label>
+              Rating
+              <input type="number" id="rating" placeholder="8.7" min="0" max="10" step="0.1" />
+            </label>
+
+            <label>
+              Runtime (minutes)
+              <input type="number" id="runtime" placeholder="136" min="0" />
+            </label>
+
+            <label>
+              Status
+              <select id="status">
+                <option>Plan to Watch</option>
+                <option>Watching</option>
+                <option>Completed</option>
+                <option>On Hold</option>
+              </select>
+            </label>
+
+            <div class="actions">
+              <button type="submit" id="submitBtn">Save Movie</button>
+              <button type="button" id="cancelBtn" class="secondary hidden">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel list-panel">
+          <div class="panel-header">
+            <h2>Movie List</h2>
+            <div id="summary" class="summary-pill">0 movies</div>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Genre</th>
+                  <th>Year</th>
+                  <th>Rating</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="movieList"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="sript.js"></script>
+  </body>
+</html>
